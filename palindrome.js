@@ -1,7 +1,17 @@
 function isPalindrome(str) {
   // Remove non-alphanumeric characters and convert to lowercase
-  str = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+  const cleanStr = str.replace(/[\W_]/g, '').toLowerCase();
 
-  // Compare the string to its reverse
-  return str === str.split('').reverse().join('');
+  // Reverse the cleaned string
+  const reversedStr = cleanStr.split('').reverse().join('');
+
+  // Compare the original and reversed strings
+  return cleanStr === reversedStr;
+}
+
+const myStr = 'racecar';
+if (isPalindrome(myStr)) {
+  console.log(`${myStr} is a palindrome!`);
+} else {
+  console.log(`${myStr} is not a palindrome.`);
 }
