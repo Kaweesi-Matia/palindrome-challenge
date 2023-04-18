@@ -1,5 +1,5 @@
 function isPalindrome(str) {
-  // Remove non-alphanumeric characters and convert to lowercase
+  // Remove non-alphanumeric characters and convert to lowercase.
   const cleanStr = str.replace(/[\W_]/g, '').toLowerCase();
 
   // Reverse the cleaned string
